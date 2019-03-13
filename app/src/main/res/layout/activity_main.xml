@@ -8,28 +8,40 @@
 
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <EditText
             android:id="@+id/url_input"
-            android:layout_alignParentTop="true"
             android:layout_width="match_parent"
-            android:text="testing 123"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="134dp" />
 
         <TextView
             android:id="@+id/textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="enter a url"
-            android:layout_below="@id/url_input"/>
+            android:layout_below="@id/url_input"
+            android:text="enter a url" />
 
         <Button
-            android:layout_below="@id/textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="queue song"/>
+            android:layout_below="@id/textview"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="0dp"
+            android:text="queue song" />
+
+        <EditText
+            android:id="@+id/Header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ems="10"
+            android:inputType="none"
+            android:editable="false"
+            android:text="Pass the Aux" />
 
     </RelativeLayout>
 </LinearLayout>
