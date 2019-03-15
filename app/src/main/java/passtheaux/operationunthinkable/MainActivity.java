@@ -2,8 +2,19 @@ package passtheaux.operationunthinkable;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    TextView title;
+    TextView instructions;
+    EditText youtubeLink;
+    Button queueButton;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
