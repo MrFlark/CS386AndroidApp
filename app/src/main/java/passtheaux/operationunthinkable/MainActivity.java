@@ -60,28 +60,18 @@ public class MainActivity extends AppCompatActivity {
 
                 int lengthOfFile = connection.getContentLength();
 
-                // download the file
                 InputStream input = new BufferedInputStream(url.openStream(), lengthOfFile);
-
-                Log.v("TESTING 123", "1");
 
                 File f = new File(getFilesDir().toString() + "/download_test.mp3");
                 f.createNewFile();
 
-                Log.v("TESTING 123", "2");
-
-                // Output stream
                 OutputStream output = new FileOutputStream(getFilesDir().toString() + "/download_test.mp3");
-
-                Log.v("TESTING 123", "3");
 
                 byte data[] = new byte[1024];
 
                 while ((count = input.read(data)) != -1) {
                     output.write(data, 0, count);
                 }
-
-                Log.v("TESTING 123", "4");
 
                 output.flush();
                 output.close();
@@ -98,8 +88,6 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(String file_url) {
             //play song
             try {
-                Log.v("TESTING 123", "5");
-
                 MediaPlayer mediaPlayer = new MediaPlayer();
                 mediaPlayer.setDataSource(getFilesDir() + "/download_test.mp3");
                 mediaPlayer.prepare();
@@ -112,8 +100,6 @@ public class MainActivity extends AppCompatActivity {
                         tv.setText(tv.getText() + "(playing...)");
                     }
                 });
-
-                Log.v("TESTING 123", "6");
             } catch (Exception e) {
 
             }
