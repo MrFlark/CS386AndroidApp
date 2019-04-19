@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Operation Unthinkable</string>
     <string name="title_activity_create_join_session">CreateJoinSession</string>
+    <string name="title_activity_join_session">JoinSession</string>
 </resources>
