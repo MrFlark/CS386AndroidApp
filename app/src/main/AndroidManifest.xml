@@ -16,7 +16,7 @@
         <activity
             android:name=".JoinSession"
             android:label="@string/title_activity_join_session"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".CreateJoinSession"
             android:label="@string/title_activity_create_join_session"
@@ -27,13 +27,24 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="passtheaux.operationunthinkable.MainActivity" />
         </activity>
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".CreateSessionActivity"
+            android:label="@string/title_activity_create_session"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NowPlayingActivity"
+            android:label="@string/title_activity_now_playing"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".QueueSongActivity"
+            android:label="@string/title_activity_queue_song"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

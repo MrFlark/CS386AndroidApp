@@ -45,24 +45,9 @@ public class CreateJoinSession extends AppCompatActivity
         });
     }
 
-    public void toCreateSession()
-    {
-
-    }
-    public void toJoinSession()
-    {
-
-    }
-
     public void goToQueue(View view)
     {
         Intent goToQueue = new Intent(this, MainActivity.class);
         startActivity(goToQueue);
     }
-
-    public void goToJoin(View view)
-    {
-
-    }
-
 }
