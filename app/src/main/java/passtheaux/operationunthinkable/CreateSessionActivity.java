@@ -69,46 +69,25 @@ public class CreateSessionActivity extends AppCompatActivity {
                     });
                 }
 
+                CreateSessionRequest req = new CreateSessionRequest();
+                req.password = password;
+                req.displayName = displayName;
+                req.name = username;
 
                 client.post(req.url, new RequestParams(req.Serialize()), new AsyncHttpResponseHandler() {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-
                         String responseJson = new String(responseBody);
 
                         Log.v("TAG", responseJson);
 
                         final CreateSessionResponse response = new Gson().fromJson(responseJson, CreateSessionResponse.class);
+                        Constants.SessionId = response.sessionId;
+                        Constants.ClientId = response.clientId;
 
                         Log.v("TAG", "callback 2");
 
-                        //joined session, now queue song
-
-
-                        CreateSessionRequest req = new CreateSessionRequest();
-                        req.displayName = displayName;
-                        req.name = username;
-                        req.password = password;
-                        client.post(req.url, new RequestParams(req.Serialize()), new AsyncHttpResponseHandler() {
-                            @Override
-                            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-
-                                String responseJson = new String(responseBody);
-
-                                Log.v("TAG", responseJson);
-
-                                final CreateSessionResponse response = new Gson().fromJson(responseJson, CreateSessionResponse.class);
-
-                                Log.v("TAG", "callback 2");
-
-                                startActivity(new Intent(CreateSessionActivity.this, NowPlayingActivity.class));
-                            }
-
-                            @Override
-                            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-
-                            }
-                        });
+                        startActivity(new Intent(CreateSessionActivity.this, NowPlayingActivity.class));
                     }
 
                     @Override
