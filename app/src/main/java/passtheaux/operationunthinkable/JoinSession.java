@@ -38,5 +38,12 @@ public class JoinSession extends AppCompatActivity
         startActivity(goHome);
     }
 
+    public void goToJoin(View view)
+    {
+        Intent goToJoin = new Intent(this, JoinSession.class);
+
+        startActivity(goToJoin);
+    }
+
 
 }
