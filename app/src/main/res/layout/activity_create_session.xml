@@ -73,10 +73,16 @@
             android:id="@+id/textView2"
             android:layout_width="241dp"
             android:layout_height="66dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
             android:text="Pass the Aux"
             android:textSize="40sp"
-            tools:layout_editor_absoluteX="90dp"
-            tools:layout_editor_absoluteY="16dp" />
+            app:layout_constraintBottom_toTopOf="@+id/usernameField"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </android.support.constraint.ConstraintLayout>
 
