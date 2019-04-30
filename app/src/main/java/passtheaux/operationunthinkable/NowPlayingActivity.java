@@ -35,6 +35,13 @@ public class NowPlayingActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        ((Button)findViewById(R.id.queueSongButton)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(NowPlayingActivity.this, QueueSongActivity.class));
+            }
+        });
+
         ((Button)findViewById(R.id.pauseButton)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
