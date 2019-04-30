@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#5c6b73"
     tools:context=".JoinSession">
 
     <android.support.constraint.ConstraintLayout
@@ -12,11 +13,12 @@
 
         <Button
             android:id="@+id/sendCode"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="220dp"
+            android:layout_height="65dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="250dp"
+            android:background="#e0fbfc"
             android:text="@string/title_activity_join_session"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -31,6 +33,7 @@
             android:layout_marginEnd="300dp"
             android:onClick="homeScreen"
             android:text="@string/back_button"
+            android:background="#e0fbfc"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -43,6 +46,7 @@
             android:layout_marginTop="50dp"
             android:layout_marginEnd="8dp"
             android:text="@string/title_activity_join_session"
+            android:textColor="#ffffff"
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
