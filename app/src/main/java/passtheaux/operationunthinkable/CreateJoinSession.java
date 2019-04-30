@@ -9,6 +9,7 @@ import android.view.View;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 public class CreateJoinSession extends AppCompatActivity
 {
@@ -30,6 +31,15 @@ public class CreateJoinSession extends AppCompatActivity
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        ((Button)findViewById(R.id.button2)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent goToJoin = new Intent(CreateJoinSession.this, JoinSession.class);
+
+                startActivity(goToJoin);
+            }
+        });
     }
 
     public void toCreateSession()
@@ -49,9 +59,7 @@ public class CreateJoinSession extends AppCompatActivity
 
     public void goToJoin(View view)
     {
-        Intent goJoin = new Intent(this, JoinSession.class);
 
-        startActivity(goJoin);
     }
 
 }

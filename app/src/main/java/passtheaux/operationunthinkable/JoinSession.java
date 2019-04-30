@@ -20,15 +20,6 @@ public class JoinSession extends AppCompatActivity
         setContentView(R.layout.activity_join_session);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
     public void homeScreen(View view)
@@ -38,12 +29,6 @@ public class JoinSession extends AppCompatActivity
         startActivity(goHome);
     }
 
-    public void goToJoin(View view)
-    {
-        Intent goToJoin = new Intent(this, JoinSession.class);
-
-        startActivity(goToJoin);
-    }
 
 
 }
