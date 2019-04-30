@@ -11,6 +11,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import android.content.Intent;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+
 import com.google.gson.Gson;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -184,4 +189,12 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+    public void homeScreen(View view)
+    {
+        Intent goHome = new Intent(this, CreateJoinSession.class);
+
+        startActivity(goHome);
+    }
+
 }

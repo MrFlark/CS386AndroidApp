@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#5c6b73"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".CreateJoinSession"
     tools:showIn="@layout/activity_create_join_session">
@@ -13,13 +14,16 @@
         android:layout_width="163dp"
         android:layout_height="64dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="300dp"
         android:layout_marginEnd="8dp"
+        android:background="#e0fbfc"
+        android:onClick="goToQueue"
         android:text="Create Session"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <Button
         android:id="@+id/button2"
@@ -30,6 +34,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="Join Session"
+        android:onClick="goToJoin"
+        android:background="#e0fbfc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,6 +50,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="Pass the Aux"
+        android:textColor="#ffffff"
         android:textSize="45sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
