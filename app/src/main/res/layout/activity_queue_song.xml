@@ -37,11 +37,12 @@
             android:id="@+id/searchButton"
             android:text="search"/>
 
-        <ScrollView
-            android:id="@+id/results"
-            android:layout_below="@id/searchButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </ScrollView>
+            <LinearLayout
+                android:layout_below="@id/searchButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/results_view">
+            </LinearLayout>
+
     </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>
