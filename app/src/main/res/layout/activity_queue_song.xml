@@ -20,14 +20,28 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_queue_song" />
+    <RelativeLayout
+        android:layout_marginTop="75dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchBar"/>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/searchBar"
+            android:id="@+id/searchButton"
+            android:text="search"/>
+
+        <ScrollView
+            android:id="@+id/results"
+            android:layout_below="@id/searchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </ScrollView>
+    </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>
