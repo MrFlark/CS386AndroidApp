@@ -11,6 +11,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
+import com.plattysoft.leonids.ParticleSystem;
+
 public class CreateJoinSession extends AppCompatActivity
 {
 
@@ -22,12 +24,13 @@ public class CreateJoinSession extends AppCompatActivity
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
+        final FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                new ParticleSystem(CreateJoinSession.this, 5000, R.drawable.confetti, 2000)
+                        .setSpeedRange(0.2f, 0.7f)
+                        .oneShot(fab, 500);
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
