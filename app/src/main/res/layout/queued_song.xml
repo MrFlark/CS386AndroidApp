@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/queueNumber">
+    </TextView>
+
+    <TextView
+        android:id="@+id/nameField">
+    </TextView>
+
+</android.support.constraint.LinearLayout>
