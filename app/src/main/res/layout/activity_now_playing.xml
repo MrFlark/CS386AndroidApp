@@ -2,8 +2,10 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#5c6b73"
     tools:context="passtheaux.operationunthinkable.NowPlayingActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -27,55 +29,81 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="75dp">
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true">
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            tools:layout_editor_absoluteX="130dp">
 
             <Button
                 android:id="@+id/pauseButton"
-                android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:text="pause"
-                android:layout_alignParentTop="true"
-                android:textAlignment="center">
-            </Button>
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="152dp"
+                android:background="#e0fbfc"
+                android:text="@string/pause"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/queueSongButton"
-                android:text="queue song"
-                android:layout_below="@id/pauseButton"/>
-
-            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="155dp"
+                android:layout_marginEnd="8dp"
+                android:background="#e0fbfc"
+                android:text="@string/now_playing_activity_queue"
+                app:layout_constraintEnd_toStartOf="@+id/sessionInfoButton"
+                app:layout_constraintStart_toEndOf="@+id/pauseButton"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
                 android:id="@+id/refreshButton"
-                android:text="refresh"
-                android:layout_below="@id/queueSongButton"/>
-
-            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="40dp"
+                android:background="#e0fbfc"
+                android:text="@string/refresh"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
                 android:id="@+id/sessionInfoButton"
-                android:layout_below="@id/refreshButton"
-                android:text="session info"/>
-
-            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/leaveSessionButton"
-                android:layout_below="@id/sessionInfoButton"
-                android:text="leave session"/>
+                android:layout_marginTop="65dp"
+                android:layout_marginEnd="4dp"
 
-        </RelativeLayout>
+                android:background="#e0fbfc"
+                android:text="@string/session_info"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/leaveSessionButton" />
+
+            <Button
+                android:id="@+id/leaveSessionButton"
+                android:layout_width="106dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="#e0fbfc"
+                android:text="@string/leave_session"
+                app:layout_constraintBottom_toTopOf="@+id/sessionInfoButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
 
         <ScrollView
-            android:layout_alignParentRight="true"
             android:id="@+id/songList"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
         </ScrollView>
     </RelativeLayout>
 
