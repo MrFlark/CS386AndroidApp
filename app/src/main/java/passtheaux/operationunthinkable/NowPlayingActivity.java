@@ -98,4 +98,11 @@ public class NowPlayingActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void homeScreen(View view)
+    {
+        Intent goHome = new Intent(this, CreateJoinSession.class);
+
+        startActivity(goHome);
+    }
 }
